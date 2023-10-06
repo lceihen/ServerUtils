@@ -1,0 +1,17 @@
+{
+  "name": "ServerUtils",
+  "version": "1.0.0",
+  "description": "",
+  "build": "pnpm -r --filter ./packages run build",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx -y only-allow pnpm",
+    "changeset": "changeset"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2"
+  }
+}
