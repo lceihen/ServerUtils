@@ -18,3 +18,13 @@ jobs:
       - run: npm run release
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
+      - name: create and publish versions
+        uses: changesets/action@v1
+        with:
+          version: pnpm ci:version
+          commit: "chore: update versions"
+          title: "chore: update versions"
+          publish: pnpm ci:publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -7,8 +7,7 @@
     "preinstall": "npx -y only-allow pnpm",
     "changeset": "changeset",
     "preBuild": "pnpm install",
-    "build": "pnpm install && node scripts/build.js",
-    "release": "pnpm run build && pnpm run changeset && pnpm changeset version && pnpm changeset publish"
+    "build": "pnpm install && node scripts/build.js"
   },
   "keywords": [],
   "author": "",

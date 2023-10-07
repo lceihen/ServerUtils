@@ -20,22 +20,6 @@ importers:
         specifier: ^6.33.0
         version: 6.33.0
 
-  packages/Mysql:
-    dependencies:
-      sequelize:
-        specifier: ^6.33.0
-        version: 6.33.0
-    devDependencies:
-      '@types/node':
-        specifier: ^20.8.2
-        version: 20.8.2
-
-  packages/mysql:
-    dependencies:
-      sequelize:
-        specifier: ^6.33.0
-        version: 6.33.0
-
   packages/mysql-utils:
     dependencies:
       sequelize:
