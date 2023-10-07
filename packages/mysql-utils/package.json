@@ -1,15 +1,22 @@
 {
   "name": "@lceihen/mysql-utils",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "echo 111"
+    "build": "mkdir "
   },
+  "files": [
+    "index",
+    "dist"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "peerDependencies": {
     "sequelize": "^6.33.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

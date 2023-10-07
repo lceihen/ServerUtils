@@ -2,17 +2,22 @@
   "name": "ServerUtils",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
     "preinstall": "npx -y only-allow pnpm",
     "changeset": "changeset",
-    "build": "pnpm -r run build"
+    "preBuild": "pnpm install",
+    "build": "pnpm install && node scripts/build.js",
+    "release": "pnpm run build && pnpm run changeset && pnpm changeset version && pnpm changeset publish"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
-    "@types/node": "^20.8.2"
+    "@types/node": "^20.8.2",
+    "execa": "^8.0.1",
+    "rimraf": "^5.0.5",
+    "sequelize": "^6.33.0"
   }
 }
