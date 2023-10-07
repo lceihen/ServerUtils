@@ -8,7 +8,7 @@
     "changeset": "changeset",
     "preBuild": "pnpm install",
     "build": "pnpm install && node scripts/build.js",
-    "release": "pnpm publish -r"
+    "release": "pnpm changeset publish"
   },
   "keywords": [],
   "author": "",
