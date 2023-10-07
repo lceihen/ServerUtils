@@ -7,8 +7,27 @@ importers:
       '@changesets/cli':
         specifier: ^2.26.2
         version: 2.26.2
+      '@types/node':
+        specifier: ^20.8.2
+        version: 20.8.2
+
+  packages/Mysql:
+    dependencies:
+      sequelize:
+        specifier: ^6.33.0
+        version: 6.33.0
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.2
+        version: 20.8.2
 
   packages/mysql:
+    dependencies:
+      sequelize:
+        specifier: ^6.33.0
+        version: 6.33.0
+
+  packages/mysql-utils:
     dependencies:
       sequelize:
         specifier: ^6.33.0
@@ -296,7 +315,6 @@ packages:
 
   /@types/node@20.8.2:
     resolution: {integrity: sha512-Vvycsc9FQdwhxE3y3DzeIxuEJbWGDsnrxvMADzTDF/lcdR9/K+AQIeAghTQsHtotg/q0j3WEOYS/jQgSdWue3w==}
-    dev: false
 
   /@types/normalize-package-data@2.4.2:
     resolution: {integrity: sha512-lqa4UEhhv/2sjjIQgjX8B+RBjj47eo0mzGasklVJ78UKGQY1r0VpB9XHDaZZO9qzEFDdy4MrXLuEaSmPrPSe/A==}

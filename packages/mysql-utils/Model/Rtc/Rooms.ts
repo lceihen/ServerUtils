@@ -12,7 +12,6 @@ const Rooms = Instance.define("Rooms", {
   roomType: {
     type: DataTypes.STRING,
     allowNull: false,
-    allowNull: false,
   },
   roomTalkId: {
     type: DataTypes.STRING,
