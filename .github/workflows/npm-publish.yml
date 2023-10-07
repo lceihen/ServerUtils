@@ -16,8 +16,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm install -g pnpm
 
-      - name: create and publish versions
-        uses: changesets/action@v1
+      - uses: changesets/action@v1
         with:
           commit: "chore: update versions"
           title: "chore: update versions"
