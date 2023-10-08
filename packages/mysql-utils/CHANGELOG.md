@@ -1,5 +1,11 @@
 # Mysql
 
+## 1.0.8
+
+### Patch Changes
+
+- sa
+
 ## 1.0.7
 
 ### Patch Changes
