@@ -8,7 +8,8 @@
     "changeset": "changeset",
     "preBuild": "pnpm install",
     "build": "pnpm install && node scripts/build.js",
-    "release": "pnpm run build && pnpm changeset publish"
+    "release": "pnpm run build && pnpm changeset publish",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,7 @@
     "@types/node": "^20.8.2",
     "execa": "^8.0.1",
     "rimraf": "^5.0.5",
-    "sequelize": "^6.33.0"
+    "sequelize": "^6.33.0",
+    "husky": "^8.0.0"
   }
 }
