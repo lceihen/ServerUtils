@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@changesets/cli": "^2.26.2",
+    "@changesets/cli": "^2.26.0",
     "@types/node": "^20.8.2",
     "execa": "^8.0.1",
     "rimraf": "^5.0.5",
