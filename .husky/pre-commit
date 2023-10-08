@@ -1,2 +1,4 @@
 #!/usr/bin/env sh
-echo 1111
+pnpm run changeset
+git add .changeset
+pnpm changeset version 
