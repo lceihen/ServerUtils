@@ -4,11 +4,14 @@
   "private": true,
   "description": "",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "preinstall": "npx -y only-allow pnpm",
     "changeset": "changeset",
     "build": "node scripts/build.js",
-    "release": "changeset publish"
+    "release": "pnpm run build && pnpm run changeset && pnpm changeset version && pnpm changeset publish"
   },
   "keywords": [],
   "author": "",
