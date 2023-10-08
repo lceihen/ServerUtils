@@ -39,4 +39,4 @@ const generatePackageDist = async () => {
 };
 
 generatePackageDist();
-console.log();
+console.log(1);
