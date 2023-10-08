@@ -16,6 +16,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm install -g pnpm
       - run: pnpm install --no-frozen-lockfile
+      - run: echo ${{ secrets.GITHUBCITOKEN }}
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
