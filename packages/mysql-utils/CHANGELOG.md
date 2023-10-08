@@ -1,5 +1,11 @@
 # Mysql
 
+## 2.0.0
+
+### Major Changes
+
+- hh
+
 ## 1.0.9
 
 ### Patch Changes
