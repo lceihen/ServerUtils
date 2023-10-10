@@ -3,23 +3,24 @@ import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { createRequire } from "node:module";
 import { execa, execaSync } from "execa";
+import { rimraf } from "rimraf";
+
+const { join } = path;
+
+const { resolve } = path;
 
 const require = createRequire(import.meta.url);
-const rootPackagesPath = path.resolve(`packages`);
+
+const rootPackagesPath = resolve(`packages`);
 
 const getAllChildComponentDir = async (rootPackagesPath) => {
   const vaildChildPackagePathList = [];
   try {
     const files = await fs.readdir(rootPackagesPath);
-    for (const file of files) {
-      console.log(file);
-      const childrenPackageFilePath = path.resolve(
-        rootPackagesPath,
-        file,
-        "package.json"
-      );
+    for (const fileName of files) {
+      const childrenPackageFilePath = resolve(rootPackagesPath, fileName);
 
-      if (existsSync(childrenPackageFilePath)) {
+      if (existsSync(join(childrenPackageFilePath, "package.json"))) {
         vaildChildPackagePathList.push(childrenPackageFilePath);
       }
     }
@@ -32,11 +33,15 @@ const getAllChildComponentDir = async (rootPackagesPath) => {
 
 const generatePackageDist = async () => {
   const result = await getAllChildComponentDir(rootPackagesPath);
-  result.forEach((url) => {
-    const childrenPackageJson = require(url);
-    console.log("childrenPackageJson", childrenPackageJson);
+  result.forEach(async (url) => {
+    await execa("pnpm", ["install"], { cwd: url });
+    await execa("rimraf", ["dist"], { cwd: url });
+    await execa("rollup", ["-c", "--environment", `TARGET:${url}`]);
   });
 };
 
-generatePackageDist();
-console.log(1234);
+const main = async () => {
+  await generatePackageDist();
+};
+
+main();

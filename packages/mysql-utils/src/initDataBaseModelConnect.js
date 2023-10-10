@@ -6,8 +6,6 @@ const AuthTokens = require("./Model/Oauth/AuthTokens");
 const AuthCodes = require("./Model/Oauth/AuthCodes");
 const Rooms = require("./Model/Rtc/Rooms");
 
-const { isProd } = require("../../utils");
-
 Users.hasMany(AuthTokens, {
   foreignKey: "userId",
 });
