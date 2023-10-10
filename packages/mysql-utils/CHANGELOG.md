@@ -1,5 +1,11 @@
 # Mysql
 
+## 10.0.5
+
+### Patch Changes
+
+- add src
+
 ## 10.0.4
 
 ### Patch Changes
