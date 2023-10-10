@@ -1,6 +1,6 @@
 {
   "name": "@lceihen/mysql-utils",
-  "version": "10.0.5",
+  "version": "10.0.6",
   "description": "@lceihen/mysql-utils",
   "main": "dist/cjs.js",
   "module": "dist/es.js",
@@ -15,7 +15,8 @@
   },
   "files": [
     "dist",
-    "src"
+    "src",
+    "README.md"
   ],
   "keywords": [
     "lceihen",
@@ -38,5 +39,5 @@
   "bugs": {
     "url": "https://github.com/lceihen/lceihen-utils/issues"
   },
-  "homepage": "https://github.com/lceihen/lceihen-utils/README.md"
+  "homepage": "https://github.com/lceihen/lceihen-utils/blob/main/README.md"
 }

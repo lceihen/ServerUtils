@@ -1,5 +1,11 @@
 # Mysql
 
+## 10.0.6
+
+### Patch Changes
+
+- npm pkg info update
+
 ## 10.0.5
 
 ### Patch Changes
