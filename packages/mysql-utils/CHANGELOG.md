@@ -1,5 +1,18 @@
 # Mysql
 
+## 10.0.3
+
+### Patch Changes
+
+- update readme
+- update cli
+
+## 10.0.2
+
+### Patch Changes
+
+- add readme
+
 ## 10.0.1
 
 ### Patch Changes
