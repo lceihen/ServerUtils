@@ -1,5 +1,11 @@
 # Mysql
 
+## 10.0.4
+
+### Patch Changes
+
+- test token
+
 ## 10.0.3
 
 ### Patch Changes
