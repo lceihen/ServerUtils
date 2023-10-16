@@ -1,16 +1,14 @@
 {
-  "name": "@lceihen/mysql-utils",
-  "version": "12.0.0",
-  "description": "@lceihen/mysql-utils",
-  "main": "index.cjs.js",
+  "name": "@lceihen/front-utils",
+  "version": "2.0.0",
+  "description": "@lceihen/front-utils",
   "module": "index.es.js",
   "publishConfig": {
     "access": "public"
   },
   "buildOptions": {
     "formats": [
-      "es",
-      "cjs"
+      "es"
     ]
   },
   "files": [
@@ -24,21 +22,21 @@
     "instanceof"
   ],
   "author": "lceihen",
-  "dependencies": {
-    "mysql2": "^3.6.1",
-    "sequelize": "^6.33.0"
-  },
+  "dependencies": {},
   "engines": {
     "node": ">=16.14.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lceihen/lceihen-utils.git",
-    "directory": "packages/mysql-utils"
+    "directory": "packages/front-utils"
   },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/lceihen/lceihen-utils/issues"
   },
-  "homepage": "https://github.com/lceihen/lceihen-utils/blob/main/README.md"
+  "homepage": "https://github.com/lceihen/lceihen-utils/blob/main/README.md",
+  "peerDependencies": {
+    "typescript": "^5.2.2"
+  }
 }

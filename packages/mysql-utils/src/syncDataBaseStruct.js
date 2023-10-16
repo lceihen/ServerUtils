@@ -1,10 +1,6 @@
-const Instance = require("./dataBaseInstance");
+const { AuthDataBaseInstance } = require("./dataBaseInstance");
 
 const Users = require("./Model/Oauth/User");
-const Clients = require("./Model/Oauth/Clients");
-const AuthTokens = require("./Model/Oauth/AuthTokens");
-const AuthCodes = require("./Model/Oauth/AuthCodes");
-const Rooms = require("./Model/Rtc/Rooms");
 
 const handleInitFirstUser = async () => {
   const users = await Users.findAll();
@@ -34,7 +30,7 @@ const handleInitFirstUser = async () => {
 // };
 
 const syncDataBase = () => {
-  Instance.sync()
+  AuthDataBaseInstance.sync()
     .then(async () => {
       await handleInitFirstUser();
       console.log("Database synced successfully.");
@@ -46,7 +42,7 @@ const syncDataBase = () => {
 
 const clearDataBase = async () => {
   try {
-    await Instance.getQueryInterface().dropAllTables();
+    await AuthDataBaseInstance.getQueryInterface().dropAllTables();
     console.log("数据库中的所有表已清空");
   } catch (error) {
     console.error("清空数据库中的所有表时出错:", error);

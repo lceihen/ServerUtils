@@ -1,4 +1,4 @@
-const Instance = require("./dataBaseInstance");
+const { AuthDataBaseInstance } = require("./dataBaseInstance");
 
 const Users = require("./Model/Oauth/User");
 const Clients = require("./Model/Oauth/Clients");
@@ -43,7 +43,7 @@ Rooms.belongsTo(Users, {
 });
 
 const initDataBaseModelConnect = () => {
-  Instance.authenticate()
+  AuthDataBaseInstance.authenticate()
     .then(() => {
       console.log("Database connection has been established successfully.");
     })

@@ -1,8 +1,8 @@
 const { DataTypes } = require("sequelize");
-const Users = require("./User");
-const Instance = require("../../dataBaseInstance");
 
-const AuthTokens = Instance.define("AuthTokens", {
+const { AuthDataBaseInstance } = require("../../dataBaseInstance");
+
+const AuthTokens = AuthDataBaseInstance.define("AuthTokens", {
   id: {
     type: DataTypes.STRING,
     defaultValue: DataTypes.UUIDV4,

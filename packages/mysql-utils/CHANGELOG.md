@@ -1,5 +1,18 @@
 # Mysql
 
+## 12.0.0
+
+### Major Changes
+
+- change version
+- change entry
+
+## 11.0.0
+
+### Major Changes
+
+- add front utils
+
 ## 10.0.6
 
 ### Patch Changes

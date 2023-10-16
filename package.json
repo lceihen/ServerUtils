@@ -10,22 +10,24 @@
   "scripts": {
     "preinstall": "npx -y only-allow pnpm",
     "version": "pnpm changeset && pnpm changeset version && pnpm changeset publish",
-    "build": "node scripts/build.js",
-    "release": "pnpm run build && pnpm run changeset && pnpm changeset version && pnpm changeset publish"
+    "build": "node scripts/build.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@changesets/cli": "^2.26.0",
+    "@changesets/cli": "^2.26.2",
     "@rollup/plugin-commonjs": "^25.0.5",
     "@rollup/plugin-json": "^6.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
     "@types/node": "^20.8.2",
     "execa": "^8.0.1",
     "minimist": "^1.2.8",
     "rimraf": "^5.0.5",
-    "rollup": "^4.0.2"
+    "rollup": "^4.0.2",
+    "rollup-plugin-visualizer": "^5.9.2",
+    "typescript": "^5.2.2"
   }
 }

@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
-const Instance = require("../../dataBaseInstance");
+const { AuthDataBaseInstance } = require("../../dataBaseInstance");
 
-const Clients = Instance.define("Clients", {
+const Clients = AuthDataBaseInstance.define("Clients", {
   id: {
     type: DataTypes.STRING,
     primaryKey: true,

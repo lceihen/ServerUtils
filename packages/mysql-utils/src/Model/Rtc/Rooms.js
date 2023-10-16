@@ -1,6 +1,6 @@
 const { DataTypes } = require("sequelize");
-const Instance = require("../../dataBaseInstance");
-const Rooms = Instance.define("Rooms", {
+const { RtcDataBaseInstance } = require("../../dataBaseInstance");
+const Rooms = RtcDataBaseInstance.define("Rooms", {
   id: {
     type: DataTypes.STRING,
     primaryKey: true,
