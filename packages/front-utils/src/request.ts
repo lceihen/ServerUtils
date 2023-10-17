@@ -26,7 +26,11 @@ interface IRequestProps {
   };
 }
 
-const handletransformData = (data: any, method: string, headers: any) => {
+export const handletransformData = (
+  data: any,
+  method: string,
+  headers: any
+) => {
   if (method === "GET") {
     return null;
   } else if (

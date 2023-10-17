@@ -14,12 +14,13 @@
   "files": [
     "dist",
     "src",
-    "README.md"
+    "README.md",
+    "index.es.js",
+    "index.cjs.js",
+    "index.js"
   ],
   "keywords": [
-    "lceihen",
-    "mysql",
-    "instanceof"
+    "lceihen"
   ],
   "author": "lceihen",
   "dependencies": {},

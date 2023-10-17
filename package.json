@@ -8,9 +8,8 @@
     "access": "public"
   },
   "scripts": {
-    "preinstall": "npx -y only-allow pnpm",
     "version": "pnpm changeset && pnpm changeset version && pnpm changeset publish",
-    "build": "node scripts/build.js"
+    "build": "pnpm install -r && node scripts/build.js"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +24,7 @@
     "@types/node": "^20.8.2",
     "execa": "^8.0.1",
     "minimist": "^1.2.8",
+    "ora": "^7.0.1",
     "rimraf": "^5.0.5",
     "rollup": "^4.0.2",
     "rollup-plugin-visualizer": "^5.9.2",

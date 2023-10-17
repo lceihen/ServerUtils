@@ -58,11 +58,11 @@ const generateRollupConfig = () => {
 
 const defaultOutPutFormatter = {
   es: {
-    file: resolve(`${TARGET}/dist/es.js`),
+    file: resolve(`${TARGET}/dist/es/index.js`),
     format: `es`,
   },
   cjs: {
-    file: resolve(`${TARGET}/dist/cjs.js`),
+    file: resolve(`${TARGET}/dist/cjs/index.js`),
     format: `cjs`,
   },
 };

@@ -16,7 +16,10 @@
   "files": [
     "dist",
     "src",
-    "README.md"
+    "README.md",
+    "index.es.js",
+    "index.cjs.js",
+    "index.js"
   ],
   "keywords": [
     "lceihen",
@@ -27,9 +30,6 @@
   "dependencies": {
     "mysql2": "^3.6.1",
     "sequelize": "^6.33.0"
-  },
-  "engines": {
-    "node": ">=16.14.0"
   },
   "repository": {
     "type": "git",
