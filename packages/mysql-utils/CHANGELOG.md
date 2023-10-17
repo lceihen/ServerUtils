@@ -1,5 +1,11 @@
 # Mysql
 
+## 13.0.2
+
+### Patch Changes
+
+- add css output
+
 ## 13.0.1
 
 ### Patch Changes
