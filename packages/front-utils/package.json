@@ -1,8 +1,8 @@
 {
   "name": "@lceihen/front-utils",
-  "version": "2.0.0",
+  "version": "3.0.1",
   "description": "@lceihen/front-utils",
-  "module": "index.es.js",
+  "module": "dist/es/index.js",
   "publishConfig": {
     "access": "public"
   },
@@ -17,13 +17,13 @@
     "README.md",
     "index.es.js",
     "index.cjs.js",
-    "index.js"
+    "index.js",
+    "index.ts"
   ],
   "keywords": [
     "lceihen"
   ],
   "author": "lceihen",
-  "dependencies": {},
   "engines": {
     "node": ">=16.14.0"
   },
@@ -37,7 +37,8 @@
     "url": "https://github.com/lceihen/lceihen-utils/issues"
   },
   "homepage": "https://github.com/lceihen/lceihen-utils/blob/main/README.md",
-  "peerDependencies": {
+  "devDependencies": {
+    "@types/node": "^20.8.2",
     "typescript": "^5.2.2"
   }
 }

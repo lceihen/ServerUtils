@@ -1,6 +1,5 @@
 {
   "name": "@lceihen/utils",
-  "version": "1.0.0",
   "private": true,
   "description": "",
   "type": "module",
@@ -9,7 +8,9 @@
   },
   "scripts": {
     "version": "pnpm changeset && pnpm changeset version && pnpm changeset publish",
-    "build": "pnpm install -r && node scripts/build.js"
+    "build": "pnpm install -r && node scripts/build.js",
+    "build:js": "node scripts/build.js",
+    "build:nodemon": "nodemon --config nodemon.json scripts/build.js"
   },
   "keywords": [],
   "author": "",
@@ -22,8 +23,11 @@
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.5",
     "@types/node": "^20.8.2",
+    "boxen": "^7.1.1",
+    "chalk": "^5.3.0",
     "execa": "^8.0.1",
     "minimist": "^1.2.8",
+    "nodemon": "^3.0.1",
     "ora": "^7.0.1",
     "rimraf": "^5.0.5",
     "rollup": "^4.0.2",

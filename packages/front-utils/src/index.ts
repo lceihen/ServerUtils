@@ -1,4 +1,4 @@
-import request, { handleGetParamString, handletransformData } from "./request";
+export { request } from "./request";
 
 export const getBase64 = (img: any, callback: (url: string) => void) => {
   const reader = new FileReader();
@@ -13,8 +13,4 @@ export const _window = inMicroEnv ? window.$wujie?.props?.realWindow : window;
 //@ts-ignore
 export const getSubAppProps = window.$wujie?.props || {};
 
-export default {
-  request,
-  handleGetParamString,
-  handletransformData,
-};
+console.log();

@@ -23,3 +23,5 @@ module.exports = {
   ...syncDataBaseStruct,
   ...SequelizeModel,
 };
+
+console.log(1);

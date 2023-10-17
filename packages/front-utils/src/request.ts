@@ -1,7 +1,5 @@
 import { _window } from "./index";
 
-const replaceWindow = _window ? _window : window;
-
 export const handleGetParamString = (data: any = {}) => {
   const queryArray: Array<string> = [];
   Object.keys(data).map((key) => {
@@ -19,10 +17,10 @@ interface IRequestProps {
   headers?: any;
   params?: any;
   authConfig: {
-    prodUrl: string;
-    secret: string;
-    authUrl: string;
-    clientId: string;
+    prodUrl?: string;
+    secret?: string;
+    authUrl?: string;
+    clientId?: string;
   };
 }
 
@@ -43,21 +41,23 @@ export const handletransformData = (
   }
 };
 
-export default (props: IRequestProps) => {
+export const request = (props: IRequestProps) => {
   let {
-    BaseUrl,
+    BaseUrl = "",
     url,
     config = {},
     data,
     method = "GET",
     headers = {},
     params = {},
-    authConfig,
+    authConfig = {},
   } = props || {};
 
   method = method.toUpperCase();
 
   const paramString = handleGetParamString(params);
+
+  const replaceWindow = _window ? _window : window;
 
   url =
     method === "GET" ? `${url}${paramString ? "?" + paramString : ""}` : url;

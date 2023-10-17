@@ -5,6 +5,10 @@ import { createRequire } from "node:module";
 import { execa, execaSync } from "execa";
 import { rimraf } from "rimraf";
 import ora from "ora";
+import chalk from "chalk";
+import boxen from "boxen";
+
+import { watchDir } from "../dev.build.js";
 
 const { join } = path;
 
@@ -14,14 +18,19 @@ const require = createRequire(import.meta.url);
 
 const rootPackagesPath = resolve(`packages`);
 
+const log = console.log;
+
 const getAllChildComponentDir = async (rootPackagesPath) => {
   const childPackagePathList = [];
   try {
-    const files = await fs.readdir(rootPackagesPath);
+    const files = (await fs.readdir(rootPackagesPath)) || [];
     for (const fileName of files) {
       const childrenPackageFilePath = resolve(rootPackagesPath, fileName);
 
-      if (existsSync(join(childrenPackageFilePath, "package.json"))) {
+      if (
+        existsSync(join(childrenPackageFilePath, "package.json")) &&
+        watchDir.includes(fileName)
+      ) {
         childPackagePathList.push(childrenPackageFilePath);
       }
     }
@@ -41,11 +50,7 @@ const generatePackageDist = () => {
       const { childPackagePathList, files } = await getAllChildComponentDir(
         rootPackagesPath
       );
-
       spinner.succeed();
-
-      // spinner.successText = "GetAllChildComponentDir Success";
-
       childPackagePathList.forEach(async (url, index) => {
         spinner.text = `Build ${files[index]}`;
         spinner.start();
@@ -61,12 +66,23 @@ const generatePackageDist = () => {
 };
 
 const main = async () => {
-  // const spinner = ora("Loading unicorns").start();
-  // spinner.color = "green";
-  // spinner.text = "Build Start";
+  let buildPackagesLabel =
+    "The items involved in this package are as follows: \n\n";
+  buildPackagesLabel += watchDir
+    .map((item) => chalk.green.bold(item))
+    .join(chalk.blue(", "));
+
+  const myBox = boxen(buildPackagesLabel, {
+    padding: { left: 1, right: 1 },
+    margin: 1,
+    float: "center",
+    borderStyle: "round",
+    borderColor: "green",
+  });
+
+  console.log(chalk.green(myBox));
 
   await generatePackageDist();
-  // spinner.stop();
 };
 
 main();
