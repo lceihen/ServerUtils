@@ -1,4 +1,4 @@
-## 有帮助的话，欢迎 Start 👏👏👏
+## 有帮助的话，欢迎 Star👏👏👏
 
 `pnpm link --global`
 
@@ -10,6 +10,18 @@
 当 pnpm run version 的时候第一个是 major version，这时不进行选择，回车跳过就可以选择 patch
 
 nodemon 监听失败，要注意 ext 是否进行了配置
+
+### 备注
+
+#### 子包可以配置 `formats` 决定是否输出`es(ES规范)` 或者 `cjs(Common规范)` 的文件，默认全部选择
+
+```
+  "buildOptions": {
+    "formats": [
+      "es"
+    ]
+  },
+```
 
 ### 流程
 
