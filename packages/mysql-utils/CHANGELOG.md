@@ -1,5 +1,11 @@
 # Mysql
 
+## 14.0.0-beta.0
+
+### Major Changes
+
+- test beta
+
 ## 13.0.2
 
 ### Patch Changes

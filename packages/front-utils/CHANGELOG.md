@@ -1,5 +1,11 @@
 # @lceihen/front-utils
 
+## 4.0.0-beta.0
+
+### Major Changes
+
+- test beta
+
 ## 3.0.2
 
 ### Patch Changes

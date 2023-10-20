@@ -1,9 +1,11 @@
 {
-  "mode": "pre",
+  "mode": "exit",
   "tag": "beta",
   "initialVersions": {
-    "@lceihen/front-utils": "3.0.2",
+    "@lceihen/front-utils": "3.0.2-beta",
     "@lceihen/mysql-utils": "13.0.2"
   },
-  "changesets": []
+  "changesets": [
+    "gorgeous-chairs-lie"
+  ]
 }

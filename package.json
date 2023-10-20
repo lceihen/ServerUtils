@@ -7,6 +7,8 @@
     "access": "public"
   },
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "version:dev": "pnpm changeset pre enter beta && pnpm run version && pnpm changeset pre exit",
     "version": "pnpm changeset && pnpm changeset version && pnpm changeset publish",
     "build": "pnpm install -r && node scripts/build.js",
     "build:js": "node scripts/build.js",

@@ -1,6 +1,6 @@
 {
   "name": "@lceihen/mysql-utils",
-  "version": "13.0.2",
+  "version": "14.0.0-beta.0",
   "description": "@lceihen/mysql-utils",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
