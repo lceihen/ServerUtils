@@ -1,0 +1,10 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "cli-utils": "1.0.0",
+    "@lceihen/front-utils": "3.0.2",
+    "@lceihen/mysql-utils": "13.0.2"
+  },
+  "changesets": []
+}
